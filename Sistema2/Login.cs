@@ -21,19 +21,14 @@ namespace Sistema2
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-           bool log= spicServices.Login(txtUserName.Text,txtPassword.Text);
+           bool log = spicServices.Login(txtUserName.Text,txtPassword.Text);
             if (log)
             {
                 Menu menu = new Menu();
-                MessageBox.Show("Acceso correcto");
                 menu.Show();
-                spicServices.getScopes();
                 this.Hide();
             }
-            else
-            {
-                MessageBox.Show("Usuario o contraseña incorrectos");
-            }
+
         }
 
         private void Login_Load(object sender, EventArgs e)

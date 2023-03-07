@@ -51,6 +51,7 @@ namespace Sistema2.services
                     var scope = JsonConvert.SerializeObject(body.scope);
                     scopes = JsonConvert.DeserializeObject<string[]>(scope);
                     acceso = true;
+                    MessageBox.Show("Acceso Correcto");
                 }
             }
             catch (Exception ex)
@@ -187,6 +188,25 @@ namespace Sistema2.services
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
+            }
+        }
+
+        public void logout()
+        {
+            string url = "https://localhost:7167/oauth/user/logout";
+            RestClient client = new RestClient(url);
+            RestRequest restRequest = new RestRequest("", Method.Post);
+            restRequest.AddHeader("Authorization",tokenAcceso);
+            restRequest.AddHeader("refresh_token",refresh_tokenAcceso);
+            var response = client.Execute(restRequest);
+            ApiResponse json = JsonConvert.DeserializeObject<ApiResponse>(response.Content);
+            if (!json.IsSuccess)
+            {
+                MessageBox.Show("error");
+            }
+            else
+            {
+                MessageBox.Show("Adios");
             }
         }
     }

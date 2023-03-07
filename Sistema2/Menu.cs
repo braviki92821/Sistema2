@@ -107,5 +107,13 @@ namespace Sistema2
         {
             openChildForm(new spicForm());
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            spic.logout();
+            Login log=new Login();
+            log.Show();
+            this.Hide();
+        }
     }
 }
