@@ -135,7 +135,7 @@ namespace Sistema2.services
         {
             string url = "https://localhost:7167/api/spic/nuevoServidor";
             RestClient client = new RestClient(url);
-            RestRequest restRequest = new RestRequest("", Method.Get);
+            RestRequest restRequest = new RestRequest("", Method.Post);
             restRequest.AddHeader("Authorization", tokenAcceso);
             restRequest.AddBody(spic);
             var response = client.Execute(restRequest);
