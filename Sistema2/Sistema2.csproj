@@ -97,13 +97,14 @@
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
     <Compile Include="modelos\ApiResponse.cs" />
+    <Compile Include="modelos\bodyClass\newUser.cs" />
+    <Compile Include="modelos\bodyClass\searchSP.cs" />
     <Compile Include="modelos\Genero.cs" />
     <Compile Include="modelos\institucionDependencia.cs" />
     <Compile Include="modelos\nivelResponsabilidad.cs" />
     <Compile Include="modelos\puesto.cs" />
     <Compile Include="modelos\ramo.cs" />
     <Compile Include="modelos\spic.cs" />
-    <Compile Include="modelos\spicResults.cs" />
     <Compile Include="modelos\superiorInmediato.cs" />
     <Compile Include="modelos\superiorInmediatoPuesto.cs" />
     <Compile Include="modelos\tipoArea.cs" />

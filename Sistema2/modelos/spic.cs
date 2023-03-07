@@ -7,6 +7,7 @@ namespace s2_services.models
 {
     public class Spic
     { 
+        public string Id { get; set; }
         public DateTime fechaCaptura { get; set; }
         public string ejercicioFiscal { get; set; }
         public string rfc { get; set; }

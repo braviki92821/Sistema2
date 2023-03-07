@@ -12,6 +12,7 @@ using s2_services.models;
 using System.Windows.Forms;
 using RestSharp.Serializers.Json;
 using System.Web.Security;
+using Sistema2.modelos.bodyClass;
 
 namespace Sistema2.services
 {
@@ -22,7 +23,7 @@ namespace Sistema2.services
         public static string userN { get; set; }
         public static string[] scopes { get; set; }
 
-        public spicServices(){}
+        public spicServices() { }
 
         public bool Login(string user, string pass) ///boleano o string o puedes poner algo que retorne los mensajes
         {
@@ -60,14 +61,15 @@ namespace Sistema2.services
             return acceso;
         }
 
-        public void nuevoUsuario(user User)
+        public void nuevoUsuario(newUser newUser)
         {
-            try {
+            try
+            {
                 string url = "https://localhost:7167/oauth/user/registrar";
-                RestClient rest= new RestClient(url);
-                RestRequest restRequest = new RestRequest("",Method.Post);
+                RestClient rest = new RestClient(url);
+                RestRequest restRequest = new RestRequest("", Method.Post);
                 restRequest.AddHeader("Authorization", tokenAcceso);
-                restRequest.AddBody(new { username = User.usernames, nombres = User.names, apellidoPaterno = User.apellidoPater, apellidoMaterno = User.apellidoMater, email = User.correo, dependencia = User.institucion, password = User.contraseña, scope = User.scopes});
+                restRequest.AddBody(newUser);
                 var response = rest.Execute(restRequest);
                 ApiResponse json = JsonConvert.DeserializeObject<ApiResponse>(response.Content);
                 Console.WriteLine(json);
@@ -80,7 +82,8 @@ namespace Sistema2.services
                     MessageBox.Show("Usuario registrado correctamente");
                 }
             }
-            catch(Exception e) {
+            catch (Exception e)
+            {
                 MessageBox.Show(e.Message);
             }
         }
@@ -105,37 +108,34 @@ namespace Sistema2.services
             return refresh_tokenAcceso;
         }
 
-        public  List<Spic> GetAllSpic() //podriamos usar esto para retornarlo en una tabla
+        public List<Spic> GetAllSpic(searchSP query) //podriamos usar esto para retornarlo en una tabla
         {
-            string url = "https://localhost:7167/api/spic";
+            string url = "https://localhost:7167/api/spic/ObtenerServidor";
             RestClient client = new RestClient(url);
-            RestRequest restRequest = new RestRequest("", Method.Get);
+            RestRequest restRequest = new RestRequest("", Method.Post);
             restRequest.AddHeader("Authorization", tokenAcceso);
+            //restRequest.AddParameter("application/json",query,ParameterType.RequestBody);
+            restRequest.AddBody(query);
             var response = client.Execute(restRequest);
+
             ApiResponse json = JsonConvert.DeserializeObject<ApiResponse>(response.Content);
             if (!json.IsSuccess)
             {
                 MessageBox.Show("alv no tenemos datos");
                 return null;
             }
-  
-                var content = JsonConvert.SerializeObject(json.Content);
-                Console.WriteLine(content);
-                List<Spic> spicResult = JsonConvert.DeserializeObject<List<Spic>>(content);
-                //Console.WriteLine(spicResults.Count);
-                //foreach (Spic spic in spicResults)
-                //{
-                //    Console.WriteLine(spic.nombres);
-                //}
-                return spicResult;
+            var content = JsonConvert.SerializeObject(json.Content);
+            Console.WriteLine(content);
+            List<Spic> spicResult = JsonConvert.DeserializeObject<List<Spic>>(content);
 
+            return spicResult;
         }
 
         public void nuevoServidor(Spic spic)
         {
             string url = "https://localhost:7167/api/spic/nuevoServidor";
             RestClient client = new RestClient(url);
-            RestRequest restRequest = new RestRequest("", Method.Post);
+            RestRequest restRequest = new RestRequest("", Method.Get);
             restRequest.AddHeader("Authorization", tokenAcceso);
             restRequest.AddBody(spic);
             var response = client.Execute(restRequest);
@@ -152,7 +152,7 @@ namespace Sistema2.services
 
         public string ramdonPassword()
         {
-            string newPass = Membership.GeneratePassword(8,2);
+            string newPass = Membership.GeneratePassword(8, 2);
             return newPass;
         }
 
@@ -183,7 +183,8 @@ namespace Sistema2.services
                     var scope = JsonConvert.SerializeObject(body.scope);
                     scopes = JsonConvert.DeserializeObject<string[]>(scope);
                 }
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
             }

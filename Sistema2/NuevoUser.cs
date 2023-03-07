@@ -1,4 +1,5 @@
 ﻿using Sistema2.modelos;
+using Sistema2.modelos.bodyClass;
 using Sistema2.services;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,7 @@ namespace Sistema2
 {
     public partial class NuevoUser : Form
     {
-        user usuario=new user();    
+        newUser newUser = new newUser();   
 
         spicServices spic=new spicServices();
         public NuevoUser()
@@ -25,15 +26,16 @@ namespace Sistema2
 
         private void btnNuevoUsuario_Click(object sender, EventArgs e)
         {
-            usuario.usernames=txtNombres.Text+" "+txtApellidoPaterno.Text+" "+txtApellidoMaterno.Text;
-            usuario.names = txtNombres.Text;
-            usuario.apellidoPater = txtApellidoPaterno.Text;
-            usuario.apellidoMater = txtApellidoMaterno.Text;
-            usuario.correo = txtEmail.Text;
-            usuario.contraseña=txtPassword.Text;
-            usuario.institucion = txtDependencia.Text;
-            usuario.scopes = tpUsuario();
-            spic.nuevoUsuario(usuario);
+            newUser.username=txtNombres.Text+" "+txtApellidoPaterno.Text+" "+txtApellidoMaterno.Text;
+            newUser.nombres = txtNombres.Text;
+            newUser.apellidoPaterno = txtApellidoPaterno.Text;
+            newUser.apellidoMaterno = txtApellidoMaterno.Text;
+            newUser.email = txtEmail.Text;
+            newUser.password=txtPassword.Text;
+            newUser.dependencia = txtDependencia.Text;
+            newUser.scope = tpUsuario();
+            spic.nuevoUsuario(newUser);
+            limpiarCampos();
         }
 
         private void btnCambiarPassword_Click(object sender, EventArgs e)
@@ -42,6 +44,11 @@ namespace Sistema2
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            limpiarCampos();
+        }
+
+        private void limpiarCampos()
         {
             txtNombres.Text = "";
             txtApellidoPaterno.Text = "";

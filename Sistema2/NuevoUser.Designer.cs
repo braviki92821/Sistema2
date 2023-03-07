@@ -43,8 +43,8 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbtnAdministrador = new System.Windows.Forms.RadioButton();
             this.rbtnUsuario = new System.Windows.Forms.RadioButton();
+            this.rbtnAdministrador = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -95,7 +95,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 12.25F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(318, 136);
+            this.label3.Location = new System.Drawing.Point(356, 136);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(144, 19);
             this.label3.TabIndex = 4;
@@ -107,7 +107,7 @@
             this.txtApellidoPaterno.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtApellidoPaterno.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtApellidoPaterno.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtApellidoPaterno.Location = new System.Drawing.Point(321, 155);
+            this.txtApellidoPaterno.Location = new System.Drawing.Point(359, 155);
             this.txtApellidoPaterno.Name = "txtApellidoPaterno";
             this.txtApellidoPaterno.Size = new System.Drawing.Size(184, 22);
             this.txtApellidoPaterno.TabIndex = 3;
@@ -117,7 +117,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 12.25F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(541, 136);
+            this.label4.Location = new System.Drawing.Point(592, 136);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(146, 19);
             this.label4.TabIndex = 6;
@@ -129,7 +129,7 @@
             this.txtApellidoMaterno.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtApellidoMaterno.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtApellidoMaterno.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtApellidoMaterno.Location = new System.Drawing.Point(544, 155);
+            this.txtApellidoMaterno.Location = new System.Drawing.Point(595, 155);
             this.txtApellidoMaterno.Name = "txtApellidoMaterno";
             this.txtApellidoMaterno.Size = new System.Drawing.Size(184, 22);
             this.txtApellidoMaterno.TabIndex = 5;
@@ -139,7 +139,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 12.25F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(541, 240);
+            this.label5.Location = new System.Drawing.Point(592, 240);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(106, 19);
             this.label5.TabIndex = 12;
@@ -151,7 +151,7 @@
             this.txtPassword.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtPassword.Location = new System.Drawing.Point(544, 259);
+            this.txtPassword.Location = new System.Drawing.Point(595, 259);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.ReadOnly = true;
             this.txtPassword.Size = new System.Drawing.Size(184, 22);
@@ -162,7 +162,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 12.25F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(318, 240);
+            this.label6.Location = new System.Drawing.Point(356, 240);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(116, 19);
             this.label6.TabIndex = 10;
@@ -174,7 +174,7 @@
             this.txtDependencia.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtDependencia.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDependencia.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtDependencia.Location = new System.Drawing.Point(321, 259);
+            this.txtDependencia.Location = new System.Drawing.Point(359, 259);
             this.txtDependencia.Name = "txtDependencia";
             this.txtDependencia.Size = new System.Drawing.Size(184, 22);
             this.txtDependencia.TabIndex = 9;
@@ -223,6 +223,16 @@
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             // 
+            // rbtnUsuario
+            // 
+            this.rbtnUsuario.AutoSize = true;
+            this.rbtnUsuario.Location = new System.Drawing.Point(154, 19);
+            this.rbtnUsuario.Name = "rbtnUsuario";
+            this.rbtnUsuario.Size = new System.Drawing.Size(61, 17);
+            this.rbtnUsuario.TabIndex = 1;
+            this.rbtnUsuario.Text = "Usuario";
+            this.rbtnUsuario.UseVisualStyleBackColor = true;
+            // 
             // rbtnAdministrador
             // 
             this.rbtnAdministrador.AutoSize = true;
@@ -234,16 +244,6 @@
             this.rbtnAdministrador.TabStop = true;
             this.rbtnAdministrador.Text = "Administrador";
             this.rbtnAdministrador.UseVisualStyleBackColor = true;
-            // 
-            // rbtnUsuario
-            // 
-            this.rbtnUsuario.AutoSize = true;
-            this.rbtnUsuario.Location = new System.Drawing.Point(154, 19);
-            this.rbtnUsuario.Name = "rbtnUsuario";
-            this.rbtnUsuario.Size = new System.Drawing.Size(61, 17);
-            this.rbtnUsuario.TabIndex = 1;
-            this.rbtnUsuario.Text = "Usuario";
-            this.rbtnUsuario.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -258,7 +258,7 @@
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel2.Location = new System.Drawing.Point(321, 175);
+            this.panel2.Location = new System.Drawing.Point(359, 175);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(186, 2);
             this.panel2.TabIndex = 16;
@@ -267,7 +267,7 @@
             // 
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel3.Location = new System.Drawing.Point(545, 175);
+            this.panel3.Location = new System.Drawing.Point(596, 175);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(185, 2);
             this.panel3.TabIndex = 17;
@@ -285,7 +285,7 @@
             // 
             this.panel5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel5.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel5.Location = new System.Drawing.Point(322, 279);
+            this.panel5.Location = new System.Drawing.Point(360, 279);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(185, 2);
             this.panel5.TabIndex = 19;
@@ -294,7 +294,7 @@
             // 
             this.panel6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel6.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel6.Location = new System.Drawing.Point(544, 279);
+            this.panel6.Location = new System.Drawing.Point(595, 279);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(185, 2);
             this.panel6.TabIndex = 20;
@@ -305,7 +305,7 @@
             this.btnNuevoUsuario.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btnNuevoUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevoUsuario.Font = new System.Drawing.Font("Arial", 10.25F, System.Drawing.FontStyle.Bold);
-            this.btnNuevoUsuario.Location = new System.Drawing.Point(497, 332);
+            this.btnNuevoUsuario.Location = new System.Drawing.Point(522, 332);
             this.btnNuevoUsuario.Name = "btnNuevoUsuario";
             this.btnNuevoUsuario.Size = new System.Drawing.Size(130, 37);
             this.btnNuevoUsuario.TabIndex = 21;
@@ -319,7 +319,7 @@
             this.btnLimpiar.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiar.Font = new System.Drawing.Font("Arial", 10.25F, System.Drawing.FontStyle.Bold);
-            this.btnLimpiar.Location = new System.Drawing.Point(643, 332);
+            this.btnLimpiar.Location = new System.Drawing.Point(680, 331);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(130, 37);
             this.btnLimpiar.TabIndex = 22;
@@ -330,7 +330,7 @@
             // btnCambiarPassword
             // 
             this.btnCambiarPassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnCambiarPassword.Location = new System.Drawing.Point(734, 261);
+            this.btnCambiarPassword.Location = new System.Drawing.Point(786, 259);
             this.btnCambiarPassword.Name = "btnCambiarPassword";
             this.btnCambiarPassword.Size = new System.Drawing.Size(24, 22);
             this.btnCambiarPassword.TabIndex = 23;
