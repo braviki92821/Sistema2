@@ -36,6 +36,7 @@ namespace Sistema2
         {
             Application.ExitThread();
         }
+
         private void initialDesing()
         {
             panelSpic.Visible=false;
@@ -105,7 +106,7 @@ namespace Sistema2
 
         private void btnCargarD_Click(object sender, EventArgs e)
         {
-            openChildForm(new spicForm());
+            
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -114,6 +115,16 @@ namespace Sistema2
             Login log=new Login();
             log.Show();
             this.Hide();
+        }
+
+        private void btnBuscarSp_Click(object sender, EventArgs e)
+        {
+            openChildForm(new spicForm());
+        }
+
+        private void btnAgregarSP_Click(object sender, EventArgs e)
+        {
+            openChildForm(new nuevoSp());
         }
     }
 }

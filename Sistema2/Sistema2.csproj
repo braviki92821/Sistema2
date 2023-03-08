@@ -111,6 +111,12 @@
     <Compile Include="modelos\tipoProcedimiento.cs" />
     <Compile Include="modelos\tokenBody.cs" />
     <Compile Include="modelos\user.cs" />
+    <Compile Include="nuevoSp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="nuevoSp.Designer.cs">
+      <DependentUpon>nuevoSp.cs</DependentUpon>
+    </Compile>
     <Compile Include="NuevoUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nuevoSp.resx">
+      <DependentUpon>nuevoSp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NuevoUser.resx">
       <DependentUpon>NuevoUser.cs</DependentUpon>

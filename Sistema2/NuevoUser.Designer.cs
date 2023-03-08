@@ -71,7 +71,7 @@
             // txtNombres
             // 
             this.txtNombres.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtNombres.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtNombres.BackColor = System.Drawing.SystemColors.Menu;
             this.txtNombres.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombres.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold);
             this.txtNombres.Location = new System.Drawing.Point(70, 155);
@@ -104,7 +104,7 @@
             // txtApellidoPaterno
             // 
             this.txtApellidoPaterno.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtApellidoPaterno.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtApellidoPaterno.BackColor = System.Drawing.SystemColors.Menu;
             this.txtApellidoPaterno.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtApellidoPaterno.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold);
             this.txtApellidoPaterno.Location = new System.Drawing.Point(359, 155);
@@ -126,7 +126,7 @@
             // txtApellidoMaterno
             // 
             this.txtApellidoMaterno.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtApellidoMaterno.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtApellidoMaterno.BackColor = System.Drawing.SystemColors.Menu;
             this.txtApellidoMaterno.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtApellidoMaterno.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold);
             this.txtApellidoMaterno.Location = new System.Drawing.Point(595, 155);
@@ -148,7 +148,7 @@
             // txtPassword
             // 
             this.txtPassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtPassword.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtPassword.BackColor = System.Drawing.SystemColors.Menu;
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold);
             this.txtPassword.Location = new System.Drawing.Point(595, 259);
@@ -171,7 +171,7 @@
             // txtDependencia
             // 
             this.txtDependencia.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtDependencia.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtDependencia.BackColor = System.Drawing.SystemColors.Menu;
             this.txtDependencia.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDependencia.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold);
             this.txtDependencia.Location = new System.Drawing.Point(359, 259);
@@ -193,7 +193,7 @@
             // txtEmail
             // 
             this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtEmail.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtEmail.BackColor = System.Drawing.SystemColors.Menu;
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold);
             this.txtEmail.Location = new System.Drawing.Point(70, 259);

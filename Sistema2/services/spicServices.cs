@@ -140,7 +140,9 @@ namespace Sistema2.services
             restRequest.AddHeader("Authorization", tokenAcceso);
             restRequest.AddBody(spic);
             var response = client.Execute(restRequest);
+            Console.WriteLine(response.Content);
             ApiResponse json = JsonConvert.DeserializeObject<ApiResponse>(response.Content);
+            Console.WriteLine(json.Content);
             if (!json.IsSuccess)
             {
                 MessageBox.Show("error cuando se guardadon los datos");

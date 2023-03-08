@@ -33,15 +33,15 @@
             this.panelUsuarios = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.btnPNU = new System.Windows.Forms.Button();
-            this.btnPanelUsers = new System.Windows.Forms.Button();
             this.panelSpic = new System.Windows.Forms.Panel();
             this.btnCargarD = new System.Windows.Forms.Button();
             this.btnBuscarSp = new System.Windows.Forms.Button();
             this.btnAgregarSP = new System.Windows.Forms.Button();
-            this.btnPanelSp = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnPanelUsers = new System.Windows.Forms.Button();
+            this.btnPanelSp = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelUsuarios.SuspendLayout();
             this.panelSpic.SuspendLayout();
@@ -109,22 +109,6 @@
             this.btnPNU.UseVisualStyleBackColor = true;
             this.btnPNU.Click += new System.EventHandler(this.btnPNU_Click);
             // 
-            // btnPanelUsers
-            // 
-            this.btnPanelUsers.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPanelUsers.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPanelUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPanelUsers.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.btnPanelUsers.Image = global::Sistema2.Properties.Resources.flechaAzul;
-            this.btnPanelUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPanelUsers.Location = new System.Drawing.Point(0, 197);
-            this.btnPanelUsers.Name = "btnPanelUsers";
-            this.btnPanelUsers.Size = new System.Drawing.Size(293, 43);
-            this.btnPanelUsers.TabIndex = 2;
-            this.btnPanelUsers.Text = "Administrar Usuarios";
-            this.btnPanelUsers.UseVisualStyleBackColor = true;
-            this.btnPanelUsers.Click += new System.EventHandler(this.btnPanelUsers_Click);
-            // 
             // panelSpic
             // 
             this.panelSpic.BackColor = System.Drawing.SystemColors.MenuBar;
@@ -161,6 +145,7 @@
             this.btnBuscarSp.TabIndex = 2;
             this.btnBuscarSp.Text = "Buscar S.P en contratacion";
             this.btnBuscarSp.UseVisualStyleBackColor = false;
+            this.btnBuscarSp.Click += new System.EventHandler(this.btnBuscarSp_Click);
             // 
             // btnAgregarSP
             // 
@@ -175,6 +160,53 @@
             this.btnAgregarSP.TabIndex = 1;
             this.btnAgregarSP.Text = "Agregar S.P en  contratacion";
             this.btnAgregarSP.UseVisualStyleBackColor = false;
+            this.btnAgregarSP.Click += new System.EventHandler(this.btnAgregarSP_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Location = new System.Drawing.Point(0, -1);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(293, 211);
+            this.panel2.TabIndex = 2;
+            // 
+            // panelContenedor
+            // 
+            this.panelContenedor.AutoScroll = true;
+            this.panelContenedor.BackColor = System.Drawing.Color.White;
+            this.panelContenedor.Location = new System.Drawing.Point(299, -1);
+            this.panelContenedor.Name = "panelContenedor";
+            this.panelContenedor.Size = new System.Drawing.Size(859, 687);
+            this.panelContenedor.TabIndex = 3;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = global::Sistema2.Properties.Resources.Logo_SEA390X194_Mesa_de_trabajo_1_Mesa_de_trabajo_1;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(293, 140);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // btnPanelUsers
+            // 
+            this.btnPanelUsers.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPanelUsers.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPanelUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPanelUsers.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.btnPanelUsers.Image = global::Sistema2.Properties.Resources.flechaAzul;
+            this.btnPanelUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPanelUsers.Location = new System.Drawing.Point(0, 197);
+            this.btnPanelUsers.Name = "btnPanelUsers";
+            this.btnPanelUsers.Size = new System.Drawing.Size(293, 43);
+            this.btnPanelUsers.TabIndex = 2;
+            this.btnPanelUsers.Text = "Administrar Usuarios";
+            this.btnPanelUsers.UseVisualStyleBackColor = true;
+            this.btnPanelUsers.Click += new System.EventHandler(this.btnPanelUsers_Click);
             // 
             // btnPanelSp
             // 
@@ -193,37 +225,6 @@
             this.btnPanelSp.UseVisualStyleBackColor = false;
             this.btnPanelSp.Click += new System.EventHandler(this.btnPanelSp_Click);
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(0, -1);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(293, 211);
-            this.panel2.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = global::Sistema2.Properties.Resources.Logo_SEA390X194_Mesa_de_trabajo_1_Mesa_de_trabajo_1;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(293, 140);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // panelContenedor
-            // 
-            this.panelContenedor.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panelContenedor.AutoScroll = true;
-            this.panelContenedor.BackColor = System.Drawing.Color.White;
-            this.panelContenedor.Location = new System.Drawing.Point(299, -1);
-            this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(859, 687);
-            this.panelContenedor.TabIndex = 3;
-            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -232,7 +233,9 @@
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
             this.Name = "Menu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Menu_FormClosed);
             this.Load += new System.EventHandler(this.Menu_Load);

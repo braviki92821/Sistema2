@@ -18,6 +18,7 @@ namespace Sistema2
         newUser newUser = new newUser();   
 
         spicServices spic=new spicServices();
+
         public NuevoUser()
         {
             InitializeComponent();
@@ -69,5 +70,6 @@ namespace Sistema2
             }
             return tp;
         }
+
     }
 }

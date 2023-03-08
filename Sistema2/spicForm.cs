@@ -48,11 +48,9 @@ namespace Sistema2
             sp.institucionDependencia = txtDependencia.Text;   
             foreach (Spic spicdata in spic.GetAllSpic(sp))
             {
-                dataGridView1.Rows.Add(spicdata.Id, spicdata.fechaCaptura, spicdata.nombres, spicdata.primerApellido, spicdata.segundoApellido, spicdata.institucionDependencia.nombre, spicdata.ejercicioFiscal);
+                dataGridView1.Rows.Add(spicdata.id, spicdata.fechaCaptura, spicdata.nombres, spicdata.primerApellido, spicdata.segundoApellido, spicdata.institucionDependencia.nombre, spicdata.ejercicioFiscal);
             }
         }
-
-
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
