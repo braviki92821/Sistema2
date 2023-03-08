@@ -54,6 +54,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.cbxProcedimiento = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,8 +63,8 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
@@ -254,7 +256,7 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Arial", 12.25F);
             this.btnBuscar.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.btnBuscar.Location = new System.Drawing.Point(305, 205);
+            this.btnBuscar.Location = new System.Drawing.Point(574, 201);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(104, 26);
             this.btnBuscar.TabIndex = 10;
@@ -268,7 +270,7 @@
             this.btnLimpiar.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiar.Font = new System.Drawing.Font("Arial", 12.25F);
-            this.btnLimpiar.Location = new System.Drawing.Point(441, 205);
+            this.btnLimpiar.Location = new System.Drawing.Point(722, 201);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(104, 26);
             this.btnLimpiar.TabIndex = 11;
@@ -308,11 +310,44 @@
             this.panel4.Size = new System.Drawing.Size(225, 2);
             this.panel4.TabIndex = 15;
             // 
+            // cbxProcedimiento
+            // 
+            this.cbxProcedimiento.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbxProcedimiento.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbxProcedimiento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxProcedimiento.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cbxProcedimiento.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
+            this.cbxProcedimiento.FormattingEnabled = true;
+            this.cbxProcedimiento.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.cbxProcedimiento.Items.AddRange(new object[] {
+            "CONTRATACIONES PÚBLICAS",
+            "CONCESIONES, LICENCIAS, PERMISOS, AUTORIZACIONES Y PRÓRROGAS",
+            "ENAJENACIÓN DE BIENES MUEBLES",
+            "ASIGNACIÓN Y EMISIÓN DE DICTÁMENES DE AVALÚOS NACIONALES",
+            "OTRO"});
+            this.cbxProcedimiento.Location = new System.Drawing.Point(305, 205);
+            this.cbxProcedimiento.Name = "cbxProcedimiento";
+            this.cbxProcedimiento.Size = new System.Drawing.Size(224, 22);
+            this.cbxProcedimiento.TabIndex = 16;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 12.25F, System.Drawing.FontStyle.Bold);
+            this.label6.Location = new System.Drawing.Point(301, 183);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(128, 19);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Procedimiento:";
+            // 
             // spicForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(856, 600);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.cbxProcedimiento);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -364,5 +399,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.ComboBox cbxProcedimiento;
+        private System.Windows.Forms.Label label6;
     }
 }

@@ -115,7 +115,6 @@ namespace Sistema2.services
             RestClient client = new RestClient(url);
             RestRequest restRequest = new RestRequest("", Method.Post);
             restRequest.AddHeader("Authorization", tokenAcceso);
-            //restRequest.AddParameter("application/json",query,ParameterType.RequestBody);
             restRequest.AddBody(query);
             var response = client.Execute(restRequest);
 

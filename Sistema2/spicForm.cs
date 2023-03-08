@@ -45,7 +45,8 @@ namespace Sistema2
             sp.nombres=txtNombres.Text;
             sp.primerApellido=txtApellidoPaterno.Text;
             sp.segundoApellido = txtApellidoMaterno.Text;
-            sp.institucionDependencia = txtDependencia.Text;   
+            sp.institucionDependencia = txtDependencia.Text;
+            sp.procedimiento = cbxProcedimiento.Text;
             foreach (Spic spicdata in spic.GetAllSpic(sp))
             {
                 dataGridView1.Rows.Add(spicdata.id, spicdata.fechaCaptura, spicdata.nombres, spicdata.primerApellido, spicdata.segundoApellido, spicdata.institucionDependencia.nombre, spicdata.ejercicioFiscal);
